@@ -1,0 +1,93 @@
+/* Step 1: Add the @font-face rule to define the font */
+@font-face {
+  font-family: 'ChiruFont';
+  src: url('/fonts/ChiruFont.woff2') format('woff2'),
+       url('/fonts/ChiruFont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Improves performance */
+}
+
+/* Styling for the body to remove default margins */
+body {
+  margin: 0;
+  /* Use your font globally or keep the fallback */
+  font-family: 'comicsans';
+  
+  /* Make the body a Flexbox container for overall page layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App {
+  /* Dimensions for the square box */
+  width: 200px;
+  height: 57px;
+  
+  /* Border for visibility */
+  border: 3px solid black;
+  
+  /* Position the box at the top of the page */
+  margin-top: 12px;
+  
+  /* Flexbox to center the heading inside the box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Step 2: Apply the font to the specific heading */
+.App h1 {
+  font-size: 45px;
+  font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #000;
+  text-shadow: 
+    3px 3px 0px #fff,
+    -1px -1px 0px #fff,
+    1px -1px 0px #fff,
+    -1px 1px 0px #fff,
+    1px 1px 0px #fff,
+    4px 4px 6px rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+/* ClockComponent.css */
+.clock {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+.clock-time {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.clock-date {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Digital clock style */
+.clock.digital {
+    background: #000;
+    color: #0f0;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    border: 2px solid #333;
+}
+
+.clock.digital .clock-time {
+    font-size: 1.8rem;
+    color: #0f0;
+}
+
+.clock.digital .clock-date {
+    color: #0f0;
+    opacity: 0.8;
+}
